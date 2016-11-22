@@ -1,0 +1,244 @@
+.products-cookies {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+
+  .slick-container {
+
+    .swiper-wrapper {
+
+      .swiper-slide {
+        padding: 0 20px;
+      }
+
+    }
+
+  }
+  > div,
+  .slick-slide {
+    display: block;
+  }
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 34.5%;
+    left: 16px;
+    margin-top: 0;
+    z-index: 10;
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-indent: -9999px;
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 65%;
+      width: 25px;
+      height: 25px;
+      border-top: 6px solid #ed1b24;
+      border-left: 6px solid #ed1b24;
+      content: '';
+      -webkit-transform: translate(-50%,-50%) rotate(-45deg);
+      transform: translate(-50%,-50%) rotate(-45deg);
+      -webkit-transition: border 0.3s ease;
+      transition: border 0.3s ease;
+    }
+
+    &:hover {
+
+      &:after {
+        border-top-color: #7a222e;
+        border-left-color: #7a222e;
+      }
+
+    }
+
+  }
+  .slick-next {
+    left: auto;
+    right: 16px;
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+  .site__title {
+    margin: 0;
+  }
+  .btn {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+}
+.products-cookies__layout {
+  position: relative;
+  max-width: 1125px;
+  margin: 0 auto;
+}
+.products-cookies__items {
+  padding: 26px 0 45px;
+}
+.products-cookies__item {
+  display: inline-block;
+  vertical-align: top;
+
+  &:hover {
+
+    .products-cookies__name {
+      color: #ed1b24;
+    }
+    .btn {
+      &:before {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
+
+  }
+
+}
+.products-cookies__name {
+  display: block;
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 18px;
+  @include main-font4();
+  color: #512d1d;
+  text-transform: uppercase;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.products-cookies__pic {
+  overflow: hidden;
+  display: block;
+  width: 157px;
+  height: 157px;
+  margin: 0 auto 10px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .products-cookies {
+    padding: 50px 0 0;
+
+    .slick-container {
+      @include flexbox();
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+      @include align-items(flex-start);
+      @include justify-content(flex-start);
+
+      > div,
+      .slick-slide {
+        width: 33.333%;
+        margin: 0 0 35px;
+        padding: 0 20px;
+        text-align: center;
+      }
+
+    }
+    .site__title {
+      margin: 0 0 0.05em;
+    }
+
+  }
+  .products-cookies__inner {
+    padding: 0 20px;
+  }
+  .products-cookies__items {
+    padding: 67px 0 0;
+  }
+  .products-cookies__item {
+    position: relative;
+    padding-top: 190px;
+  }
+  .products-cookies__name {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 20px;
+  }
+  .products-cookies__pic {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 150px;
+    height: 204px;
+    margin: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+}
+@media (min-width: $desktop) {
+
+  .products-cookies {
+    padding: 60px 0 0;
+
+    .site__main-title {
+      opacity: 0;
+      &.slides {
+
+        -webkit-transition: opacity 0.3s ease,  -webkit-transform 0.3s ease;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+      &.slides_active {
+        opacity: 1;
+      }
+
+    }
+    .slick-container {
+
+      > div,
+      .slick-slide {
+        display: block;
+        width: 33.333%;
+        margin: 0 0 65px;
+      }
+
+    }
+
+    .slides {
+
+      .slick-slide {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+        -webkit-transition: opacity 0.3s ease,  -webkit-transform 0.3s ease;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+
+        @for $i from 1 through 20 {
+          &:nth-child(#{$i}) {
+            transition-delay: 0.2s * $i;
+          }
+        }
+
+      }
+
+    }
+    .slides_active {
+
+      .slick-slide {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+
+    }
+
+  }
+  .products-cookies__item {
+    padding-top: 212px;
+  }
+  .products-cookies__pic {
+    width: 224px;
+    height: 204px;
+  }
+
+
+}

@@ -1,0 +1,260 @@
+.checkout {
+  position: relative;
+  padding: 58px 0;
+}
+.checkout__layout {
+  position: relative;
+  max-width: 1140px;
+  padding: 0 19px;
+  margin: 0 auto;
+  @include main-font4();
+}
+.checkout__title {
+  position: relative;
+  padding: 0 0 10px;
+  margin: 0 0 30px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #9a9a9a;
+  text-transform: uppercase;
+  @include main-font4();
+  letter-spacing: 3px;
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: url("../img/divided.png") repeat-x;
+    background-size: 10px 2px;
+    content: '';
+  }
+
+}
+.checkout__info {
+  margin: 0 0 33px;
+
+  .site__label {
+    display: block;
+    margin: 0 0 10px;
+    font-size: 15px;
+    line-height: 18px;
+    color: #9a9a9a;
+    @include main-font4();
+    letter-spacing: 5px;
+  }
+  input[type="submit"].site__input,
+  input[type="text"].site__input,
+  input[type="password"].site__input,
+  textarea.site__input,
+  input[type="email"].site__input,
+  input[type="tel"].site__input,
+  input[type="phone"].site__input,
+  input[type="number"].site__input {
+    margin: 0 0 20px;
+    width: 100%;
+    height: 40px;
+    border-color: #74564a;
+    padding: 8px 10px;
+    font-size: 16px;
+    line-height: 16px;
+
+    &:focus {
+      border-color: #ab2638;
+    }
+
+  }
+  .websters-select {
+    margin: 0 0 20px;
+    width: 100%;
+    height: 40px;
+    border-color: #74564a;
+    font-size: 16px;
+    line-height: 16px;
+
+    &_opened {
+      border-color: $websters-select-border-active;
+    }
+
+  }
+  .websters-select__arrow {
+
+    &:after {
+      top: 16px;
+      right: 13px;
+    }
+
+  }
+
+}
+.checkout__info-billing {
+  opacity: 0;
+  height: 0;
+  -webkit-transition: height 0.5s ease, opacity 0.5s ease;
+  transition: height 0.5s ease, opacity 0.5s ease;
+}
+.checkout__info-billing.visible {
+  opacity: 1;
+  -webkit-transition: height 0.5s ease, opacity 0.5s ease 0.2s;
+  transition: height 0.5s ease, opacity 0.5s ease 0.2s;
+}
+.checkout__fields {
+}
+.checkout__fields__two {
+
+
+}
+.checkout__proceed {
+  padding: 30px 0 0;
+  text-align: center;
+}
+.checkout__form {
+
+  &.hidden {
+    display: none;
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .checkout {
+    padding: 58px 0 48px;
+  }
+  .checkout__title {
+    padding: 0 0 16px;
+    margin: 0 0 31px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .checkout__info {
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include align-items(flex-start);
+    @include justify-content(space-between);
+    margin: 0 0 53px;
+
+    .site__label {
+      margin: 0;
+      text-align: right;
+      font-size: 18px;
+      line-height: 22px;
+      color: #9a9a9a;
+      letter-spacing: 3px;
+    }
+    input[type="submit"].site__input,
+    input[type="text"].site__input,
+    input[type="password"].site__input,
+    textarea.site__input,
+    input[type="email"].site__input,
+    input[type="tel"].site__input,
+    input[type="phone"].site__input,
+    input[type="number"].site__input {
+      margin: 0;
+    }
+
+    >div {
+      width: 47%;
+    }
+
+    .websters-select {
+      margin: 0;
+    }
+    .websters-select__item {
+      left: 10px;
+      right: 31px;
+    }
+    .websters-select__arrow {
+
+      &:after {
+        top: 15px;
+        right: 12px;
+      }
+
+    }
+    .websters-select__popup {
+      top: 35px;
+
+      li {
+        padding: 13px 15px;
+      }
+
+    }
+
+  }
+  .checkout__fields {
+    margin: 0 0 13px;
+    text-align: right;
+
+    >div {
+      display: inline-block;
+      vertical-align: middle;
+      width: 60%;
+
+      &:first-child {
+        width: 38%;
+        padding: 0 35px 0 0;
+        text-align: right;
+      }
+
+    }
+
+    .checkout__fields__two {
+
+      >div {
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include flex-direction(row);
+        @include align-items(flex-start);
+        @include justify-content(space-between);
+      }
+
+      input[type="submit"].site__input,
+      input[type="text"].site__input,
+      input[type="password"].site__input,
+      textarea.site__input,
+      input[type="email"].site__input,
+      input[type="tel"].site__input,
+      input[type="phone"].site__input,
+      input[type="number"].site__input {
+        width: 60%;
+      }
+      .websters-select {
+        width: 38%;
+      }
+
+    }
+  }
+  .checkout__proceed {
+    padding: 10px 0 0;
+    text-align: right;
+  }
+  .checkout__fields_zip {
+
+    >div{
+      text-align: left;
+
+      &:first-child {
+        text-align: right;
+      }
+
+    }
+
+    input[type="submit"].site__input,
+    input[type="text"].site__input,
+    input[type="password"].site__input,
+    textarea.site__input,
+    input[type="email"].site__input,
+    input[type="tel"].site__input,
+    input[type="phone"].site__input,
+    input[type="number"].site__input {
+      width: 45%;
+    }
+
+  }
+
+}
+
+

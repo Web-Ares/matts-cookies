@@ -1,0 +1,206 @@
+.popup__wrap {
+  max-width: 694px;
+}
+.sign-up {
+  background: #fff;
+  text-align: center;
+
+  input[type="submit"],
+  input[type="text"],
+  input[type="password"],
+  textarea,
+  input[type="email"],
+  input[type="tel"],
+  input[type="phone"],
+  input[type="number"] {
+    display: inline-block;
+    width: 100%;
+    height: 34px;
+    background: transparent;
+    border: 1px solid #512c1d;
+    padding: 8px 5px;
+    font-size: 11px;
+    line-height: 11px;
+    border-radius: 3px;
+    color: #000;
+    font-family: "Gotham Book", sans-serif !important;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-transition: border 0.3s ease;
+    transition: border 0.3s ease;
+    text-align: center;
+  }
+
+
+  &.success {
+
+    .sign-up__form {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .sign-up__success {
+      opacity: 1;
+      visibility: visible;
+    }
+
+  }
+
+  .gfield_label {
+    display: none;
+  }
+  .gform_body {
+    position: relative;
+    padding: 0 0 29px;
+  }
+  .validation_message {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ed1b24;
+    @include main-font6();
+    -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  .gforms_confirmation_message {
+    margin-top: 49px;
+  }
+  .gform_confirmation_message {
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(space-between);
+    height: 250px;
+    padding: 0 60px;
+  }
+
+}
+.sign-up__inner {
+  position: relative;
+  padding: 33px 30px 38px;
+  font-size: 11px;
+  line-height: 16px;
+  color: #7a222e;
+  @include main-font4();
+}
+.sign-up__form {
+
+  &.error {
+
+    .sign-up__error {
+      opacity: 1;
+      visibility: visible;
+    }
+
+  }
+
+}
+.sign-up__text {
+  padding: 0 29px;
+  letter-spacing: 1px;
+  margin: 0 0 27px;
+}
+.sign-up__input {
+  position: relative;
+  padding: 0 0 29px;
+}
+.sign-up__error {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ed1b24;
+  @include main-font6();
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.sign-up__success {
+  opacity: 0;
+  visibility: hidden;
+  @include flexbox();
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(space-between);
+  position: absolute;
+  top: 73px;
+  left: 0;
+  height: 62%;
+  padding: 0 60px;
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+@media (min-width: $desktop) {
+
+  .popup__close {
+    width: 30px;
+    height: 30px;
+    right: -27px;
+  }
+  .sign-up {
+
+    input[type="submit"],
+    input[type="text"],
+    input[type="password"],
+    textarea,
+    input[type="email"],
+    input[type="tel"],
+    input[type="phone"],
+    input[type="number"] {
+      height: 56px;
+      padding: 8px 18px;
+      font-size: 21px;
+      line-height: 21px;
+      border-width: 2px;
+    }
+
+    .gform_body {
+      padding: 0 107px 39px;
+    }
+    .validation_message {
+      bottom: auto;
+      top: 5px;
+      left: auto;
+      right: 0;
+      width: 91px;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: left;
+    }
+    .gforms_confirmation_message {
+    }
+
+  }
+  .sign-up__inner {
+    padding: 24px 26px 58px;
+    font-size: 20px;
+    line-height: 29px;
+  }
+  .sign-up__text {
+    padding: 0 29px;
+    letter-spacing: 1.5px;
+    margin: 0 0 25px;
+  }
+  .sign-up__error {
+    bottom: auto;
+    top: 5px;
+    left: auto;
+    right: 0;
+    width: 91px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+  }
+  .sign-up__input {
+    padding: 0 107px 39px;
+  }
+
+}

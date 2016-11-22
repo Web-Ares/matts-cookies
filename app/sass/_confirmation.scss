@@ -1,0 +1,42 @@
+.confirmation {
+  max-width: 500px;
+  padding: 42px 15px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  text-align: center;
+  @include main-font4();
+}
+.confirmation__layout {
+  padding: 0 57px;
+
+  >p {
+    margin: 0 0 28px;
+  }
+
+}
+.confirmation__info {
+  padding: 4px 0 0;
+  margin: 0 0 33px;
+  text-transform: none;
+}
+@media (min-width: $desktop) {
+
+  .confirmation {
+    padding: 101px 15px 54px;
+  }
+  .confirmation__layout {
+    padding: 0;
+
+    >p {
+      margin: 0 0 28px;
+    }
+
+  }
+  .confirmation__info {
+    padding: 19px 0 0;
+    margin: 0 0 54px;
+  }
+
+}
+
+

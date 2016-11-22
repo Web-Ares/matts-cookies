@@ -1,0 +1,62 @@
+//fonts
+@mixin main-font1() {
+  font-family: "myriadpro-regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin main-font2() {
+  font-family: "Bebas Neue Bold", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin main-font3() {
+  font-family: "Gotham Medium", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin main-font4() {
+  font-family: "Gotham Bold", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin main-font5() {
+  font-family: "Roboto Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin main-font6() {
+  font-family: "Gotham Book", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin justify() {
+  text-align: justify;
+
+  &:after {
+    display: inline-block;
+    width: 100%;
+    content: '';
+  }
+}
+
+@mixin absoluteCenter() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+}
+@mixin absoluteCenterX() {
+  position: absolute;
+  left: 50%;
+  transform: translateX( -50% );
+}
+@mixin absoluteCenterY() {
+  position: absolute;
+  top: 50%;
+  transform: translateY( -50% );
+}
+@mixin transform-translate( $posX, $posY ) {
+  -webkit-transform: translateX( $posX ) translateY( $posY );
+  transform: translateX( $posX ) translateY( $posY );
+}

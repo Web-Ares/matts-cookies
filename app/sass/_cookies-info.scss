@@ -1,0 +1,18 @@
+.cookies-info {
+  background: #fff;
+}
+.cookies-info__description {
+  padding: 26px 26px;
+  font-size: 11px;
+  line-height: 17px;
+  color: #7a222e;
+  @include main-font6();
+}
+
+@media (min-width: $desktop) {
+  .cookies-info {
+
+  }
+}
+
+

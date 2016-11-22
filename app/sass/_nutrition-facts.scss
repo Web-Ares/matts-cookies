@@ -1,0 +1,194 @@
+.popup__wrap {
+  max-width: 1021px;
+}
+.popup__close {
+  top: 5px;
+  width: 24px;
+  height: 24px;
+  right: 22px;
+}
+.nutrition-facts {
+  background: #fff;
+  color: #9a9a9a;
+
+  .site__title_3 {
+    text-align: center;
+  }
+  ul {
+    clear: both;
+    margin: 0 0 35px 0;
+
+    li {
+      position: relative;
+      margin-bottom: 15px;
+      padding: 0 0 0 15px;
+
+      &:after {
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 6px;
+        height: 6px;
+        border-radius: 6px;
+        background: #ec0928;
+        content: '';
+      }
+
+    }
+
+    ul {
+      margin: 10px 0 10px 25px;
+    }
+
+  }
+  ol {
+    clear: both;
+    margin: 0 0 35px 0;
+    counter-reset: list;
+
+    li {
+      position: relative;
+      margin-bottom: 15px;
+      padding: 0 0 0 15px;
+
+      &:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #ec0928;
+        counter-increment: list;
+        content: counter(list) ". ";
+      }
+
+    }
+
+    ol {
+      margin: 10px 0 10px 25px;
+    }
+
+  }
+  dl {
+    margin: 0 0 35px 0;
+
+    dt {
+      @include main-font4();
+      margin-bottom: 2px;
+      color: #ec0928;
+    }
+    dd {
+      margin-bottom: 25px;
+    }
+
+  }
+  strong {
+    @include main-font4();
+  }
+
+}
+.nutrition-facts__description {
+  position: relative;
+  padding: 15px 21px;
+  font-size: 11px;
+  line-height: 14px;
+  color: #9a9a9a;
+  @include main-font3();
+
+  p {
+    margin: 0 0 5px;
+  }
+}
+.nutrition-facts__pic {
+  max-width: 164px;
+  margin: 0 auto 17px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+.nutrition-facts__learn {
+  text-align: center;
+  text-decoration: underline;
+  padding: 20px 36px 20px;
+  font-size: 14px;
+  line-height: 17px;
+
+  a {
+    color: #7a222e;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .popup__close {
+    top: -33px;
+    width: 34px;
+    height: 34px;
+    right: -27px;
+  }
+  .nutrition-facts{
+    .site__title_3 {
+      text-align: left;
+    }
+
+    ul {
+
+      li {
+        padding: 0 0 0 30px;
+
+        &:after {
+          top: 6px;
+          width: 10px;
+          height: 10px;
+          border-radius: 10px;
+        }
+
+      }
+
+    }
+
+    ol {
+
+      li {
+        padding: 0 0 0 30px;
+      }
+
+    }
+
+  }
+  .nutrition-facts__description {
+    min-height: 700px;
+    padding: 51px 90px 51px 44%;
+    font-size: 19px;
+    line-height: 25px;
+
+    p {
+      margin: 0 0 21px;
+    }
+
+  }
+  .nutrition-facts__pic {
+    position: absolute;
+    top: 59px;
+    left: 84px;
+    max-width: 290px;
+    width: 100%;
+  }
+  .nutrition-facts__learn {
+    text-align: left;
+    text-decoration: underline;
+    padding: 12px 0 29px;
+    font-size: 19px;
+    line-height: 21px;
+  }
+
+}
+
+

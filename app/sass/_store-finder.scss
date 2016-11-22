@@ -1,0 +1,137 @@
+.store-finder {
+  //overflow: hidden;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+
+  label {
+    display: block;
+    margin: 0 0 6px;
+    text-transform: uppercase;
+  }
+  input[type="submit"].site__input,
+  input[type="text"].site__input,
+  input[type="password"].site__input,
+  textarea.site__input,
+  input[type="email"].site__input,
+  input[type="tel"].site__input,
+  input[type="phone"].site__input,
+  input[type="number"].site__input {
+    text-align: center;
+  }
+
+}
+.store-finders__layout {
+  position: relative;
+  max-width: 400px;
+  padding: 20px 40px 22px;
+  margin: 0 auto;
+}
+.store-finders__fields {
+
+  >div {
+    margin: 0 0 12px;
+  }
+
+}
+.store-finders__distance {
+  margin-bottom: 17px !important;
+}
+
+@media (min-width: $desktop) {
+
+  .store-finder {
+    text-align: left;
+
+    &.slides {
+      opacity: 0;
+      -webkit-transition: opacity 0.3s ease,  -webkit-transform 0.3s ease;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+
+
+      .store-finders__fields {
+
+        >div {
+          opacity: 0;
+          -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+          -webkit-transition: opacity 0.3s ease,  -webkit-transform 0.3s ease;
+          transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+      }
+
+    }
+    &.slides_active {
+      opacity: 1;
+
+      .store-finders__fields {
+
+        >div {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+
+          @for $i from 1 through 20 {
+            &:nth-child(#{$i}) {
+              transition-delay: 0.2s * $i;
+            }
+          }
+
+        }
+      }
+
+    }
+
+    label {
+      margin: 0 0 14px;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: none;
+    }
+    input[type="submit"].site__input,
+    input[type="text"].site__input,
+    input[type="password"].site__input,
+    textarea.site__input,
+    input[type="email"].site__input,
+    input[type="tel"].site__input,
+    input[type="phone"].site__input,
+    input[type="number"].site__input {
+      width: 100%;
+      text-align: left;
+    }
+    .websters-select {
+      width: 100%;
+    }
+    .btn {
+      width: 100%;
+    }
+
+  }
+  .store-finders__layout {
+    max-width: 1072px;
+    padding: 111px 15px 129px;
+  }
+  .store-finders__fields {
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include align-items(flex-end);
+    @include justify-content(space-between);
+
+    >div {
+      margin: 0 !important;
+    }
+  }
+  .store-finders__address {
+    width: 54.8%;
+  }
+  .store-finders__distance {
+    width: 19%;
+  }
+  .store-finders__search {
+    width: 20.7%;
+  }
+
+}
+
+

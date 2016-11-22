@@ -1,0 +1,210 @@
+.about-us {
+  position: relative;
+  overflow: hidden;
+}
+.about-us__layout {
+  position: relative;
+  margin: 0 0 20px;
+}
+.about-us__inner {
+  position: relative;
+  max-width: 1400px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.about-us__text {
+  max-width: 520px;
+  padding: 56px 41px 0;
+  margin: 0 auto;
+  text-align: justify;
+
+  p {
+    margin: 0 0 11px;
+  }
+
+}
+.about-us__caption {
+  max-width: 394px;
+  margin: 0 auto 14px;
+  padding: 0 14px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+.about-us__cookies {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+.about-us__cookies_1 {
+  top: -70px;
+  width: 133px;
+  height: 192px;
+  background-image: url("../img/about-us-cookies1-mob.jpg");
+}
+.about-us__cookies_2 {
+  top: 120px;
+  width: 87px;
+  height: 190px;
+  background-image: url("../img/about-us-cookies2-mob.jpg");
+}
+.about-us__cookies_3 {
+  top: -132px;
+  left: auto;
+  right: 0;
+  width: 107px;
+  height: 377px;
+  background-image: url("../img/about-us-cookies3-mob.jpg");
+}
+
+@media (min-width: $desktop) {
+
+  .about-us {
+
+    &.slides {
+      opacity: 0;
+      -webkit-transition: opacity 0.5s ease,  -webkit-transform 0.5s ease;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+
+      .about-us__caption {
+        //opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+        -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+      .about-us__text {
+        //opacity: 0;
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        -webkit-transition: opacity 0.7s ease,  -webkit-transform 0.7s ease;
+        transition: opacity 0.7s ease, transform 0.7s ease;
+      }
+      .about-us__cookies_1,
+      .about-us__cookies_2 {
+        opacity: 0;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        -webkit-transition: opacity 0.5s ease 0.2s,  -webkit-transform 0.5s ease 0.2s;
+        transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
+      }
+      .about-us__cookies_3,
+      .about-us__cookies_4 {
+        opacity: 0;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: opacity 0.5s ease 0.2s,  -webkit-transform 0.5s ease 0.2s;
+        transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
+      }
+
+    }
+    &.slides_active {
+      opacity: 1;
+
+      .about-us__caption {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+      .about-us__text {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+      .about-us__cookies_1,
+      .about-us__cookies_2,
+      .about-us__cookies_3,
+      .about-us__cookies_4 {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+
+
+    }
+
+  }
+  .about-us__layout {
+    margin: 0 0 59px;
+  }
+  .about-us__text {
+    font-size: 22px;
+    line-height: 30px;
+    padding: 75px 0 0;
+
+    p {
+      margin: 0 0 32px;
+    }
+
+  }
+  .about-us__caption {
+    padding: 0;
+    margin: 0 auto 39px;
+  }
+  .about-us__cookies_1 {
+    left: -90px;
+    top: -191px;
+    width: 623px;
+    height: 512px;
+    background-image: url("../img/about-us-cookies1.jpg");
+  }
+  .about-us__cookies_2 {
+    left: -90px;
+    top: 319px;
+    width: 467px;
+    height: 609px;
+    background-image: url("../img/about-us-cookies2.jpg");
+  }
+  .about-us__cookies_3 {
+    top: 17px;
+    left: auto;
+    right: -90px;
+    width: 402px;
+    height: 426px;
+    background-image: url("../img/about-us-cookies3.jpg");
+  }
+  .about-us__cookies_4 {
+    top: 442px;
+    left: auto;
+    right: -90px;
+    width: 406px;
+    height: 578px;
+    background-image: url("../img/about-us-cookies4.jpg");
+  }
+
+
+}
+@media (min-width: $desktop-wide) {
+
+  .about-us__text {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .about-us__cookies_1 {
+    left: 0;
+  }
+  .about-us__cookies_2 {
+    left: 0;
+  }
+  .about-us__cookies_3 {
+    right: 0;
+  }
+  .about-us__cookies_4 {
+    right: 0;
+
+  }
+
+}
+
+

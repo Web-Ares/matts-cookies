@@ -1,0 +1,251 @@
+.popup__wrap {
+  max-width: 1021px;
+}
+.popup__store-finder {
+
+  .popup__close {
+    top: 5px;
+    width: 24px;
+    height: 24px;
+    right: 22px;
+  }
+
+}
+
+#wpsl-search-wrap .wpsl-input label {
+  display: none;
+}
+#wpsl-search-wrap #wpsl-search-btn {
+  overflow: hidden;
+  @include inline-flex();
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(center);
+  border: none;
+  min-width: 77px;
+  height: 33px;
+  padding: 1px 24px 0;
+  margin: 0 0 0 3px;
+  border-radius: 40px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  background: #c90615;
+  text-transform: uppercase;
+  @include main-font2();
+  transform: perspective(1px) translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: background 0.3s ease, -webkit-transform 0.3s ease, color 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background: #7f050f;
+  }
+
+}
+.wpsl-search {
+  padding: 20px 10px 7px;
+  background: none;
+}
+#wpsl-search-wrap input:not([type='submit']) {
+  display: inline-block;
+  width: 85px !important;
+  height: 36px;
+  background: transparent;
+  border: 1px solid #512c1d;
+  padding: 8px 5px;
+  font-size: 11px;
+  line-height: 11px;
+  border-radius: 3px;
+  color: #000;
+  font-family: "Gotham Book", sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-transition: border 0.3s ease;
+  transition: border 0.3s ease;
+
+  &:focus {
+    border-color: #ab2638;
+  }
+
+}
+#wpsl-gmap {
+  margin-bottom: 0;
+  height: 180px;
+}
+#wpsl-search-wrap {
+  float: none;
+  text-align: center;
+}
+.wpsl-input {
+
+}
+.wpsl-no-filters #wpsl-search-wrap .wpsl-input {
+  display: inline-block;
+  width: auto !important;
+  float: none;
+}
+#wpsl-wrap #wpsl-result-list li {
+  padding: 14px 19px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #512c1d;
+  @include main-font6();
+  border-bottom: none;
+
+  strong {
+    @include main-font4();
+  }
+
+}
+.wpsl-direction-wrap {
+  display: none;
+}
+#wpsl-direction-details,
+#wpsl-stores {
+  position: relative;
+  height: auto;
+  max-height: 250px;
+
+   > .ps-scrollbar-y-rail {
+    right: 7px !important;
+    opacity: 1 !important;
+
+    .ps-scrollbar-y {
+      width: 7px;
+    }
+
+  }
+
+}
+#wpsl-search-wrap div {
+  display: inline-block;
+  vertical-align: top;
+  float: none;
+  margin: 0;
+}
+#wpsl-result-list li p {
+  margin: 0;
+}
+#wpsl-result-list li:hover {
+  background: #ebebeb;
+  color: #ec1c2c !important;
+}
+.wpsl-no-filters #wpsl-search-wrap .wpsl-input {
+  >div {
+    display: none;
+  }
+}
+#wpsl-radius {
+  display: none !important;
+}
+
+.store-finder__popup {
+  background: #fff;
+  color: #9a9a9a;
+
+  .site__title_3 {
+    text-align: center;
+  }
+
+}
+
+@media (min-width: 674px) {
+
+  #wpsl-wrap {
+    position: relative;
+    padding-right: 56.5%;
+  }
+  #wpsl-gmap {
+    position: absolute !important;
+    top: 0;
+    left: 43.5%;
+    width: 56.5%;
+    height: 100%;
+  }
+  #wpsl-result-list {
+    width: 100%;
+    margin-right: 0;
+    padding-bottom: 20px;
+  }
+
+}
+@media (min-width: $desktop) {
+
+  #wpsl-direction-details,
+  #wpsl-stores {
+    position: relative;
+    height: auto;
+    max-height: 575px;
+
+     > .ps-scrollbar-y-rail {
+      right: 20px !important;
+      opacity: 1 !important;
+
+      .ps-scrollbar-y {
+        width: 11px;
+      }
+
+    }
+
+  }
+  #wpsl-wrap #wpsl-result-list li {
+    padding: 14px 43px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  #wpsl-search-wrap {
+
+    form {
+      @include flexbox();
+      @include flex-direction(row);
+      @include align-items(flex-start);
+      @include justify-content(space-between);
+    }
+
+  }
+  .wpsl-search {
+    padding: 39px 23px 4px 48px;
+    background: none;
+  }
+  #wpsl-search-wrap input:not([type='submit']) {
+    height: 59px;
+    padding: 8px 18px;
+    font-size: 21px;
+    line-height: 21px;
+    border-width: 2px;
+    width: 100% !important;
+  }
+  #wpsl-search-wrap #wpsl-search-btn {
+    min-width: 135px;
+    height: 59px;
+    font-size: 29px;
+    line-height: 29px;
+  }
+  .wpsl-no-filters #wpsl-search-wrap .wpsl-input {
+    padding: 0 7px 0 0;
+    width: 100% !important;
+  }
+
+  .popup__store-finder {
+
+    .popup__close {
+      top: -33px;
+      width: 34px;
+      height: 34px;
+      right: -27px;
+    }
+
+  }
+  .store-finder__popup {
+
+    .site__title_3 {
+      text-align: left;
+    }
+
+  }
+
+}
+
+

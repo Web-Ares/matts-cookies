@@ -1,0 +1,44 @@
+.logo {
+  position: absolute;
+  z-index: 5;
+  top: 14px;
+  left: 50%;
+  width: 130px;
+  height: 99px;
+  -webkit-transform: translateX(-50%) translateZ(0);
+  transform: translateX(-50%) translateZ(0);
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  >img,
+  > svg {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    path{
+      box-shadow: 0 0 0 10px rgba(0,0,0,0.6);
+    }
+
+  }
+
+}
+a.logo {
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+}
+@media (min-width: $desktop) {
+  .logo {
+    z-index: 7;
+    top: 17px;
+    width: 231px;
+    height: 176px;
+  }
+}
+
+

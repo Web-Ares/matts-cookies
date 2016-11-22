@@ -1,0 +1,158 @@
+.websters-select {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  position: relative;
+  width: 91px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid $websters-select-border;
+  @include main-font6();
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 10px;
+
+  &_opened {
+    border-color: $websters-select-border-active;
+
+    .websters-select__arrow {
+
+      &:after {
+        transform: rotate(180deg);
+      }
+
+    }
+
+  }
+  &__arrow{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 25px;
+    transform-origin: center;
+
+    &:after{
+      position: absolute;
+      top: 12px;
+      right: 8px;
+      border: 4px solid transparent;
+      border-top: 5px solid #7a222e;
+      content: '';
+      -webkit-transition: -webkit-transform 200ms ease-in-out;
+      transition: transform 200ms ease-in-out;
+      -webkit-transform-origin: 50% 25%;
+      transform-origin: 50% 25%;
+    }
+  }
+  &__item {
+    overflow: hidden;
+    @include absoluteCenterY();
+    right: 20px;
+    left: 5px;
+    padding: 1px 5px 0;
+    box-sizing: border-box;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+  }
+  &_mobile {
+
+    select {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      bottom: -1px;
+      left: 1px;
+      width: 100%;
+    }
+
+  }
+  &_custom {
+
+    select {
+      position: absolute;
+      left: -100000px;
+    }
+
+  }
+  &__popup {
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+    left: -1px;
+    top: 27px;
+    width: calc( 100% + 2px);
+    box-sizing: border-box;
+    border: 1px solid $websters-select-border-active;
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+    background: $websters-select-popup-back;
+    text-align: left;
+
+    ul {
+      z-index: 1;
+    }
+
+    li {
+      white-space: nowrap;
+      overflow: hidden;
+      cursor: pointer;
+      padding: 6px 10px;
+
+      &:hover {
+        color: $websters-select-popup-item-active-color;
+        background: $websters-select-popup-item-active-back;
+      }
+
+      &.active {
+        color: $websters-select-popup-item-active-color !important;
+        background: $websters-select-popup-item-active-back !important;
+      }
+
+    }
+
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .websters-select {
+    width: 195px;
+    height: 60px;
+    font-size: 21px;
+    line-height: 21px;
+    border-width: 2px;
+
+    &__item {
+      right: 44px;
+      left: 16px;
+    }
+    &__arrow {
+      width: 40px;
+
+      &:after {
+        top: 24px;
+        right: 24px;
+        border: 8px solid transparent;
+        border-top: 10px solid #7a222e;
+      }
+
+    }
+    &__popup {
+      left: -2px;
+      top: 55px;
+      width: calc( 100% + 4px);
+      border-width: 2px;
+
+      li {
+        padding: 16px 21px;
+      }
+
+    }
+
+  }
+
+
+}
