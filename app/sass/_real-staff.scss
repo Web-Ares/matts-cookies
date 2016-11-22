@@ -246,12 +246,12 @@
       @include flex-wrap(wrap);
       @include flex-direction(row);
       @include align-items(flex-start);
-      @include justify-content(space-between);
+      @include justify-content(flex-start);
     }
 
     dl {
-      width: 28%;
-      padding: 0 0 0 30px;
+      width: 33%;
+      padding: 0 30px 0 30px;
       margin: 0 0 56px;
 
       &:after {

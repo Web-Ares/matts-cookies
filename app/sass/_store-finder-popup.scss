@@ -72,7 +72,7 @@
 }
 #wpsl-gmap {
   margin-bottom: 0;
-  height: 180px;
+  height: 180px !important;
 }
 #wpsl-search-wrap {
   float: none;
@@ -139,6 +139,9 @@
 }
 #wpsl-radius {
   display: none !important;
+}
+.wpsl-select-wrap {
+  display: none;
 }
 
 .store-finder__popup {
@@ -226,6 +229,9 @@
   .wpsl-no-filters #wpsl-search-wrap .wpsl-input {
     padding: 0 7px 0 0;
     width: 100% !important;
+  }
+  #wpsl-gmap {
+    height: 100% !important;
   }
 
   .popup__store-finder {
