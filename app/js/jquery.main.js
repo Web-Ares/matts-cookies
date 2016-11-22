@@ -64,6 +64,12 @@
                 _body[0].preloader = _self;
                 _addEvents();
 
+
+
+                $('html').css( {
+                    'overflow-y': 'hidden'
+                } );
+
             },
             _showSite = function() {
 
@@ -71,6 +77,10 @@
 
                 setTimeout(function(){
                     _preloader.remove();
+
+                    $('html').css( {
+                        'overflow-y': 'scroll'
+                    } );
                     $('.site').addClass( 'site__loaded' );
 
                 },500);

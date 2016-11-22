@@ -108,8 +108,8 @@
 #wpsl-direction-details,
 #wpsl-stores {
   position: relative;
-  height: auto;
   max-height: 250px;
+  height: 250px;
 
    > .ps-scrollbar-y-rail {
     right: 7px !important;
@@ -182,8 +182,8 @@
   #wpsl-direction-details,
   #wpsl-stores {
     position: relative;
-    height: auto;
     max-height: 575px;
+    height: 575px;
 
      > .ps-scrollbar-y-rail {
       right: 20px !important;
