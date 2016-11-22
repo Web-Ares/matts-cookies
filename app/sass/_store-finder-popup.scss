@@ -79,7 +79,10 @@
   text-align: center;
 }
 .wpsl-input {
-
+  display: inline-block !important;
+}
+.wpsl-input>div{
+  display: none !important;
 }
 .wpsl-no-filters #wpsl-search-wrap .wpsl-input {
   display: inline-block;
