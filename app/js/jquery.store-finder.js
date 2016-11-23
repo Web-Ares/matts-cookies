@@ -30,7 +30,6 @@
 
                     }
                 } );
-
                 $('#wpsl-search-input').on( {
                     keyup: function () {
 
@@ -38,7 +37,6 @@
 
                     }
                 } );
-
                 _select.on( {
                     change: function() {
 
@@ -46,6 +44,14 @@
 
                         $('#wpsl-radius-dropdown').find('option:selected').removeAttr('selected');
                         $('#wpsl-radius-dropdown').find('option[value='+ selectedVal +']').attr('selected', 'selected');
+
+                    }
+                } );
+                _btnSearch.on( {
+                    click: function() {
+
+                        $('#wpsl-search-input').trigger('keyup');
+                        $('#wpsl-radius-dropdown').trigger('change');
 
                     }
                 } );

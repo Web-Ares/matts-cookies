@@ -61,7 +61,8 @@ var paths = {
             dist: 'confirmation.min.js',
             contains: [
                 'app/js/jquery.main.js',
-                'app/js/jquery.popup.js'
+                'app/js/jquery.popup.js',
+                'app/js/jquery.confirmation.js'
             ]
         },
         {

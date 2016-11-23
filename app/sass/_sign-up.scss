@@ -35,12 +35,11 @@
   &.success {
 
     .sign-up__form {
-      opacity: 0;
-      visibility: hidden;
+     display: none;
     }
+    .gforms_confirmation_message ,
     .sign-up__success {
-      opacity: 1;
-      visibility: visible;
+      @include flexbox();
     }
 
   }
@@ -68,7 +67,14 @@
     transition: opacity 0.3s ease, visibility 0.3s ease;
   }
   .gforms_confirmation_message {
-    margin-top: 49px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 73px;
+    left: 0;
+    height: 62%;
+    -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
   .gform_confirmation_message {
     @include flexbox();
@@ -123,19 +129,22 @@
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 .sign-up__success {
-  opacity: 0;
-  visibility: hidden;
+  //opacity: 0;
+  //visibility: hidden;
   @include flexbox();
   @include flex-direction(column);
   @include align-items(center);
   @include justify-content(space-between);
-  position: absolute;
-  top: 73px;
-  left: 0;
-  height: 62%;
+  //position: absolute;
+  //top: 73px;
+  margin-top: 73px;
+  //left: 0;
+  //height: 62%;
   padding: 0 60px;
-  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  min-height: 250px;
+  //-webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+  //transition: opacity 0.3s ease, visibility 0.3s ease;
+  display: none;
 }
 
 @media (min-width: $desktop) {

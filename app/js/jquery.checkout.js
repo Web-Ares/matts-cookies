@@ -95,6 +95,8 @@
 
                         }
 
+                        $('#ship-to-different-address-checkbox').trigger('click');
+
                     }
                 } );
 
