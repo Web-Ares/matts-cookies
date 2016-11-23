@@ -150,7 +150,7 @@
                 _invalid.find('a').on( {
                     click: function () {
 
-                        $('.my-cart__promo-loading').addClass('loading');
+                        $('.my-cart__promo-loading').removeClass('loading');
 
                         _invalid.removeClass('visible');
                         _define.removeClass('hidden');
@@ -163,7 +163,7 @@
                 _applied.find('a').on( {
                     click: function () {
 
-                        $('.my-cart__promo-loading').addClass('loading');
+                        $('.my-cart__promo-loading').removeClass('loading');
 
                         _requestCancelCouponDiscount();
 
