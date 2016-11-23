@@ -32,7 +32,6 @@
 
                     }
                 } );
-
                 _input.on( {
                     keyup: function () {
 
@@ -44,7 +43,6 @@
 
                     }
                 } );
-
                 _btnUp.on( {
                     click: function () {
 
@@ -54,7 +52,6 @@
 
                     }
                 } );
-
                 _btnDown.on( {
                     click: function () {
 

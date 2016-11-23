@@ -357,12 +357,12 @@
                 _window.on( {
                     resize: function () {
 
-                        //_changeActive();
+                        _changeActive();
 
                     },
                     'scroll': function () {
 
-                        //_changeActive();
+                        _changeActive();
 
                     }
 
@@ -413,6 +413,34 @@
                     }
                 } );
 
+            },
+            _changeActive = function () {
+
+                var scrollTop = _window.scrollTop(),
+                    item = $('body').find('[data-scroll="scroll"]'),
+                    itemPos = item.offset().top;
+
+                for(var i = 0; i < item.length; i++ ) {
+
+                    var cur = $(item[i]),
+                        itemCur = $(item[i]).offset().top - _header.outerHeight(true),
+                        itemHeight = $(item[i]).outerHeight(true);
+
+                    if( scrollTop > itemCur ) {
+
+                        var curClass = cur.attr('class').split(' '),
+                            curLink = _links.filter("[data-href="+curClass[0]+"]");
+
+                        _links.removeClass('active');
+                        curLink.addClass('active');
+
+                    }
+                    if( scrollTop > ( itemCur + itemHeight ) ){
+
+                        _links.removeClass('active');
+
+                    }
+                }
             },
             _init = function() {
                 _obj[0].obj = _self;

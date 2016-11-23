@@ -22,11 +22,16 @@
 
         //private methods
         var _addEvents = function() {
-
                 _input.on( {
-                    keyup: function () {
+                    keyup: function ( e ) {
 
                         $('#wpsl-search-input').val( $(this).val() );
+
+                        if( e.keyCode == 13 ) {
+
+                            _btnSearch.trigger('click');
+
+                        }
 
                     }
                 } );
