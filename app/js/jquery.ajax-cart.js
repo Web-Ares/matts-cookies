@@ -32,7 +32,7 @@
             _totalPrice = $('.my-cart__total'),
             _load = _obj.find('.my-cart__loading'),
             _btnPromo = $('.my-cart__define .btn'),
-            _inputCoupon = _obj.find('.my-cart__define input'),
+            _inputCoupon = $('.my-cart__define input'),
             _discount = $('.my-cart__discount'),
             _define = $('.my-cart__define'),
             _applied = $('.my-cart__applied'),
