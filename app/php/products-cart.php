@@ -6,7 +6,8 @@ if($flag == 'remove'){
 
     $json_data = '{
         "cartCountProducts": "1 item",
-        "subtotal":"10$"
+        "subtotal":"10$",
+        "discount":"10$"
     }';
 
 } else if($flag == 'changeCount'){
@@ -15,7 +16,8 @@ if($flag == 'remove'){
 
     $json_data = '{
         "total": "6$",
-        "subtotal":"20$"
+        "subtotal":"20$",
+         "discount":"10$"
     }';
 
 } else if($flag == 'addToCart'){

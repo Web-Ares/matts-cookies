@@ -217,9 +217,11 @@
                             $('.site__header').removeClass('site__header_fill-cart');
                             $('.my-cart').addClass('empty');
 
+
                         } else {
 
                             _cart.find('div').html( m.cartCountProducts );
+                            _discount.find('dd').html( m.discount );
 
                         }
                         _totalPrice.find('dd').html( m.subtotal );
@@ -258,6 +260,7 @@
                         
                         elem.find('.my-cart__total-price').html( m.total );
                         _totalPrice.find('dd').html( m.subtotal );
+                        _discount.find('dd').html( m.discount );
 
                         setTimeout( function() {
 
