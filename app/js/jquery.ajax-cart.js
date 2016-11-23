@@ -31,10 +31,17 @@
             newCount = 0,
             _totalPrice = $('.my-cart__total'),
             _load = _obj.find('.my-cart__loading'),
+            _btnPromo = $('.my-cart__define .btn'),
+            _inputCoupon = _obj.find('.my-cart__define input'),
+            _discount = $('.my-cart__discount'),
+            _define = $('.my-cart__define'),
+            _applied = $('.my-cart__applied'),
+            _invalid = $('.my-cart__invalid'),
             _window = $(window);
 
         //private methods
         var _addEvents = function () {
+
 
                 _window.on( {
                     load: function() {
@@ -122,6 +129,39 @@
                     }
                 } );
 
+                _btnPromo.on( {
+                    click: function () {
+
+                        var cirItem = $(this);
+
+                        _requestCouponDiscount();
+
+                        return false;
+
+                    }
+                } );
+
+                _invalid.find('a').on( {
+                    click: function () {
+
+                        _invalid.removeClass('visible');
+                        _define.removeClass('hidden');
+
+                        return false;
+
+                    }
+                } );
+
+                _applied.find('a').on( {
+                    click: function () {
+
+                        _requestCancelCouponDiscount();
+
+                        return false;
+
+                    }
+                } );
+
             },
             _removeProduct = function( elem ) {
 
@@ -134,7 +174,6 @@
                 }, 500 );
 
             },
-            
             _requestProductRemove = function ( elem ) {
 
                 _request.abort();
@@ -164,7 +203,7 @@
                             _cart.find('div').html( m.cartCountProducts );
 
                         }
-                        _totalPrice.find('span').html( m.subtotal );
+                        _totalPrice.find('dd').html( m.subtotal );
 
                         setTimeout( function() {
 
@@ -199,13 +238,79 @@
                     success: function (m) {
                         
                         elem.find('.my-cart__total-price').html( m.total );
-                        _totalPrice.find('span').html( m.subtotal );
+                        _totalPrice.find('dd').html( m.subtotal );
 
                         setTimeout( function() {
 
                             _btnRemoveProduct.removeClass('loading');
 
                         }, 500 );
+
+                    },
+                    error: function (XMLHttpRequest) {
+                        if ( XMLHttpRequest.statusText != "abort" ) {
+                            alert("ERROR!!!");
+                        }
+                    }
+                } );
+
+            },
+            _requestCouponDiscount = function () {
+
+                _request.abort();
+                _request = $.ajax( {
+                    url: $('body').attr('data-action'),
+                    data: {
+                        action: 'apply_coupon_to_order',
+                        inputVal: _inputCoupon.val(),
+                        flag: 'coupon'
+                    },
+                    dataType: 'json',
+                    type: "get",
+                    success: function (m) {
+
+                        if( m.status == 1 ) {
+
+                            _discount.addClass('visible');
+                            _define.addClass('hidden');
+                            _applied.addClass('visible');
+                            _totalPrice.find('dd').html( m.subtotal );
+                            _discount.find('dd').html( m.discount );
+
+                        } else {
+
+                            _define.addClass('hidden');
+                            _invalid.addClass('visible');
+
+                        }
+
+                    },
+                    error: function (XMLHttpRequest) {
+                        if ( XMLHttpRequest.statusText != "abort" ) {
+                            alert("ERROR!!!");
+                        }
+                    }
+                } );
+
+            },
+            _requestCancelCouponDiscount = function ( ) {
+
+                _request.abort();
+                _request = $.ajax( {
+                    url: $('body').attr('data-action'),
+                    data: {
+                        action: 'remove_coupon_to_order',
+                        inputVal: _inputCoupon.val(),
+                        flag: 'couponRemove'
+                    },
+                    dataType: 'json',
+                    type: "get",
+                    success: function (m) {
+
+                        _totalPrice.find('dd').html( m.subtotal );
+                        _discount.removeClass('visible');
+                        _define.removeClass('hidden');
+                        _applied.removeClass('visible');
 
                     },
                     error: function (XMLHttpRequest) {

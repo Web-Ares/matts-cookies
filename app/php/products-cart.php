@@ -27,6 +27,24 @@ if($flag == 'remove'){
         "cartCountProducts": "2 item"
     }';
 
+} else if($flag == 'coupon'){
+
+    $value = $_GET['inputVal'];
+
+    $json_data = '{
+        "discount": "-$6.75",
+        "subtotal": "$6.75",
+        "status": 1
+    }';
+
+} else if($flag == 'couponRemove'){
+
+    $value = $_GET['inputVal'];
+
+    $json_data = '{
+        "subtotal": "$10.75"
+    }';
+
 }
 
 $json_data = str_replace("\r\n",'',$json_data);

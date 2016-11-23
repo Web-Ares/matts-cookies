@@ -395,15 +395,40 @@
 
                                 <!-- my-cart__promo-code -->
                                 <div class="my-cart__promo-code">
-                                    <label for="promo-code">Promo code:</label>
-                                    <input type="text" class="site__input" name="promo-code" id="promo-code">
-                                    <button type="button" class="btn btn_4"><span>APPLY</span></button>
+
+                                    <!-- my-cart__define -->
+                                    <div class="my-cart__define">
+                                        <label for="promo-code">Promo code:</label>
+                                        <input type="text" class="site__input" name="promo-code" id="promo-code">
+                                        <button type="button" class="btn btn_4"><span>APPLY</span></button>
+                                    </div>
+                                    <!-- /my-cart__define -->
+
+                                    <!-- my-cart__applied -->
+                                    <div class="my-cart__applied">
+                                        Promo code applied <a href="#">cancel</a>
+                                    </div>
+                                    <!-- /my-cart__applied -->
+
+                                    <!-- my-cart__invalid -->
+                                    <div class="my-cart__invalid">
+                                        Invalid promo code <a href="#">dismiss</a>
+                                    </div>
+                                    <!-- /my-cart__invalid -->
+
                                 </div>
                                 <!-- /my-cart__promo-code -->
 
                                 <div>
 
-                                    <span class="my-cart__total">SUBTOTAL: <span>$13.75</span></span>
+                                    <dl class="my-cart__discount">
+                                        <dt>Promo code discount:</dt>
+                                        <dd>-$3.75</dd>
+                                    </dl>
+                                    <dl class="my-cart__total">
+                                        <dt>SUBTOTAL:</dt>
+                                        <dd>$13.75</dd>
+                                    </dl>
 
                                     <button type="submit" class="btn btn_5"><span>PROCEED TO CHECKOUT</span></button>
 

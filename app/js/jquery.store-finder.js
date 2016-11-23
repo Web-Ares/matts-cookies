@@ -50,8 +50,7 @@
                 _btnSearch.on( {
                     click: function() {
 
-                        $('#wpsl-search-input').trigger('keyup');
-                        $('#wpsl-radius-dropdown').trigger('change');
+                        $('#wpsl-search-btn').trigger('click');
 
                     }
                 } );
