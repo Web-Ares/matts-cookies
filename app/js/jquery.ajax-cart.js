@@ -134,13 +134,22 @@
 
                         var cirItem = $(this);
 
-                        $('.my-cart__promo-loading').addClass('loading');
+                        if( !( _inputCoupon.val() == '' ) ) {
 
-                        if( !( cirItem.hasClass('ajax-loading') ) ) {
+                            $('.my-cart__promo-loading').addClass('loading');
 
-                            _requestCouponDiscount();
+                            if( !( cirItem.hasClass('ajax-loading') ) ) {
+
+                                _requestCouponDiscount();
+
+                            }
+
+                        } else {
+
+                            _inputCoupon.focus();
 
                         }
+
 
                         return false;
 
