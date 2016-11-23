@@ -134,7 +134,13 @@
 
                         var cirItem = $(this);
 
-                        _requestCouponDiscount();
+                        $('.my-cart__promo-loading').addClass('loading');
+
+                        if( !( cirItem.hasClass('ajax-loading') ) ) {
+
+                            _requestCouponDiscount();
+
+                        }
 
                         return false;
 
@@ -143,6 +149,8 @@
 
                 _invalid.find('a').on( {
                     click: function () {
+
+                        $('.my-cart__promo-loading').addClass('loading');
 
                         _invalid.removeClass('visible');
                         _define.removeClass('hidden');
@@ -154,6 +162,8 @@
 
                 _applied.find('a').on( {
                     click: function () {
+
+                        $('.my-cart__promo-loading').addClass('loading');
 
                         _requestCancelCouponDiscount();
 
@@ -269,20 +279,27 @@
                     type: "get",
                     success: function (m) {
 
-                        if( m.status == 1 ) {
+                        setTimeout( function() {
 
-                            _discount.addClass('visible');
-                            _define.addClass('hidden');
-                            _applied.addClass('visible');
-                            _totalPrice.find('dd').html( m.subtotal );
-                            _discount.find('dd').html( m.discount );
+                            if( m.status == 1 ) {
 
-                        } else {
+                                _discount.addClass('visible');
+                                _define.addClass('hidden');
+                                _applied.addClass('visible');
+                                _totalPrice.find('dd').html( m.subtotal );
+                                _discount.find('dd').html( m.discount );
 
-                            _define.addClass('hidden');
-                            _invalid.addClass('visible');
+                            } else {
 
-                        }
+                                _define.addClass('hidden');
+                                _invalid.addClass('visible');
+
+                            }
+
+                            _btnPromo.removeClass('ajax-loading');
+                            $('.my-cart__promo-loading').removeClass('loading');
+
+                        }, 500 );
 
                     },
                     error: function (XMLHttpRequest) {
@@ -307,10 +324,16 @@
                     type: "get",
                     success: function (m) {
 
-                        _totalPrice.find('dd').html( m.subtotal );
-                        _discount.removeClass('visible');
-                        _define.removeClass('hidden');
-                        _applied.removeClass('visible');
+                        setTimeout( function() {
+
+                            _totalPrice.find('dd').html( m.subtotal );
+                            _discount.removeClass('visible');
+                            _define.removeClass('hidden');
+                            _applied.removeClass('visible');
+                            $('.my-cart__promo-loading').removeClass('loading');
+
+                        }, 500 );
+
 
                     },
                     error: function (XMLHttpRequest) {

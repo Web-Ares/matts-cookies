@@ -430,7 +430,7 @@
   opacity: 0;
   visibility: hidden;
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
   right: 0;
   text-align: center;
@@ -439,6 +439,8 @@
   @include main-font4();
   -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 
   &.visible {
     opacity: 1;
@@ -461,7 +463,7 @@
   opacity: 0;
   visibility: hidden;
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
   right: 0;
   text-align: center;
@@ -470,6 +472,8 @@
   @include main-font4();
   -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 
   &.visible {
     opacity: 1;
@@ -487,6 +491,35 @@
 
   }
 
+}
+.my-cart__promo-loading {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin: -16px 0 0 -1px;
+  width: 36px;
+  height: 36px;
+  border-radius: 80px;
+  background: transparent;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid #7a222e;
+  border-left: 5px solid #7a222e;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #7a222e;
+  border-bottom: 5px solid #7a222e;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  -webkit-animation: cwSpin 1s linear .2s infinite;
+  animation: cwSpin .666s linear .2s infinite;
+
+  &.loading {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: visibility 0.5s ease, opacity 0.5s ease;
+    transition: visibility 0.5s ease, opacity 0.5s ease;
+  }
 }
 
 @-webkit-keyframes cwSpin {
@@ -652,13 +685,15 @@
     @include justify-content(space-between);
     padding: 54px 0 0 10px;
 
+
     >div {
       width: 51.5%;
       text-align: right;
 
       &:first-child {
-        width: 41.5%;
+        width: calc( 41.5% + 50px );
         text-align: left;
+        padding-right: 50px;
       }
 
     }
