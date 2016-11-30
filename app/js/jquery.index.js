@@ -30,12 +30,12 @@
                         if( _window.width() >= 1024 ) {
 
                             _dom.stop( true, false );
-                            _dom.animate( { scrollTop: $('.site').offset().top - 91  }, 300 );
+                            _dom.animate( { scrollTop: $('.site').offset().top  }, 300 );
 
                         } else {
 
                             _dom.stop( true, false );
-                            _dom.animate( { scrollTop: $('.site').offset().top - 64  }, 300 );
+                            _dom.animate( { scrollTop: $('.site').offset().top  }, 300 );
 
                         }
 

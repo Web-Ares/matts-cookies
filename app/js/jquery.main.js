@@ -608,6 +608,8 @@
 
                     }
 
+                    $('.slides').addClass('slides_active');
+
                 }
 
             },
