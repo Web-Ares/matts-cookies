@@ -29,10 +29,8 @@
 .real-stuff__products {
   position: relative;
   max-width: 1920px;
-  left: 50%;
   width: 467px;
-  margin: 0 auto 49px;
-  transform: translateX(-50%);
+  margin: 0 auto;
 }
 .real-stuff__products-img {
   background: url("../img/ingredients-hero.jpeg") no-repeat center;
