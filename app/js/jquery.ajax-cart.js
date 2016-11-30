@@ -257,10 +257,10 @@
                     dataType: 'json',
                     type: "get",
                     success: function (m) {
-                        
+
                         elem.find('.my-cart__total-price').html( m.total );
                         _totalPrice.find('dd').html( m.subtotal );
-                        _discount.find('dd').html( m.discount );
+                        $('.my-cart__discount').find('dd').html( m.discount );
 
                         setTimeout( function() {
 
@@ -305,6 +305,7 @@
 
                                 _define.addClass('hidden');
                                 _invalid.addClass('visible');
+                                _applied.addClass('hidden');
 
                             }
 
