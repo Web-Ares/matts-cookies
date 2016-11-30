@@ -6,6 +6,7 @@
         $.each( $('.products-cookies__items'), function () {
 
             new ProductsCookiesSlider( $(this) );
+            new NamesHeights( $(this) );
 
         } );
 
@@ -14,6 +15,7 @@
             new ShopHeight ( $( this ) );
 
         } );
+
 
     } );
 
@@ -78,6 +80,120 @@
                         _initSlick();
                         _slickInit = true;
                     }
+
+                }
+
+            };
+
+        _init();
+    };
+
+    var NamesHeights = function ( obj ) {
+
+        var _self = this,
+            _obj = obj,
+            _window = $( window ),
+            _slides = _obj.find('.products-cookies__item'),
+            _mass = [],
+            _position = 0,
+            _height = 0;
+
+        var _addEvents = function () {
+
+                _window.on( {
+                    resize: function() {
+
+                        if( _window.width() >= 768 ) {
+
+                            _setHeight();
+
+
+                        } else {
+
+                            _slides.find('.products-cookies__name').css( {
+                                height: ''
+                            } );
+
+                        }
+
+
+                    }
+                } );
+
+            },
+            _setHeight = function() {
+
+                _slides.each( function() {
+
+                    var slide = $(this),
+                        positionCurrent = slide.offset().top;
+
+                    if( slide.parent().index() > 0 ) {
+
+                        if( positionCurrent == _position ) {
+
+                            _mass.push( slide.find('.products-cookies__name').height() )
+
+                        }
+                        else {
+
+                            var max = Math.max.apply(null, _mass);
+
+                            _slides.each( function() {
+
+                                var slide1 = $(this);
+
+                                if( slide1.offset().top == _position ) {
+
+                                    slide1.find('.products-cookies__name').height( max );
+
+                                }
+
+                            } );
+
+                            _position = slide.offset().top;
+                            _mass = [];
+                            _mass.push( slide.find('.products-cookies__name').height() );
+
+                        }
+
+                        if( slide.parent().index() == _slides.length - 1 ) {
+
+                            var max = Math.max.apply(null, _mass);
+
+                            _slides.each( function() {
+
+                                var slide1 = $(this);
+
+                                if( slide1.offset().top == _position ) {
+
+                                    slide1.find('.products-cookies__name').height( max );
+
+                                }
+
+                            } );
+
+                        }
+
+                    } else if( slide.parent().index() == 0 ) {
+
+                        _position = slide.offset().top;
+
+                        _mass.push( slide.find('.products-cookies__name').height() );
+
+                    }
+
+
+                } );
+
+            },
+            _init = function() {
+                _obj[0].obj = _self;
+                _addEvents();
+
+                if( _window.width() >= 768 ) {
+
+                    _setHeight();
 
                 }
 
