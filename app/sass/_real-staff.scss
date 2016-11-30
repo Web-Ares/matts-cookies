@@ -1,4 +1,5 @@
 .real-stuff {
+  position: relative;
   overflow: hidden;
   margin: 0 0 37px;
 }
@@ -27,13 +28,14 @@
 }
 .real-stuff__products {
   position: relative;
+  max-width: 1920px;
   left: 50%;
   width: 467px;
-  margin: 0 0 49px;
+  margin: 0 auto 49px;
   transform: translateX(-50%);
 }
 .real-stuff__products-img {
-  background: url("../img/real-staff-products.png") no-repeat center;
+  background: url("../img/ingredients-hero.jpeg") no-repeat center;
   background-size: auto 100%;
   height: 363px;
 }
@@ -107,28 +109,28 @@
   transition: transform 0.2s linear;
 }
 .real-stuff__description_1 {
-  top: 86px;
-  left: 121px;
+  top: 101px;
+  left: 156px
 }
 .real-stuff__description_2 {
-  top: 31px;
+  top: 164px;
   left: 232px;
 }
 .real-stuff__description_3 {
-  top: 111px;
-  left: 240px;
+  top: 288px;
+  left: 206px;
 }
 .real-stuff__description_4 {
-  top: 57px;
+  top: 119px;
   right: 101px;
 }
 .real-stuff__description_5 {
-  top: 265px;
-  right: 156px;
+  top: 253px;
+  right: 129px;
 }
 .real-stuff__description_6 {
   top: 196px;
-  left: 186px;
+  left: 124px;
 }
 .real-stuff__description-btn {
   position: relative;
@@ -226,13 +228,14 @@
   }
   .real-stuff__products {
     width: 1250px;
-    margin: 0 0 7px;
+    margin: 0 auto 7px;
+    left: 0;
+    transform: translateX(0);
   }
   .real-stuff__products-img {
-    background: url("../img/real-staff-products-desktop.png") no-repeat center;
+    background: url("../img/ingredients-hero.jpeg") no-repeat center;
     background-size: auto 100%;
     height: 800px;
-    margin: 0 0 0 -226px;
   }
   .real-stuff__ingredients {
     max-width: 1214px;
@@ -376,36 +379,38 @@
 
   }
   .real-stuff__description_1 {
-    top: 208px;
-    left: 340px;
+    top: 239px;
+    left: 454px;
   }
   .real-stuff__description_2 {
-    top: 130px;
-    left: 667px;
+    top: 359px;
+    left: 626px;
   }
   .real-stuff__description_3 {
-    top: 285px;
-    left: 673px;
+    top: 620px;
+    left: 568px;
   }
   .real-stuff__description_4 {
-    top: 176px;
-    right: 247px;
+    top: 253px;
+    right: 316px;
   }
   .real-stuff__description_5 {
-    top: 555px;
-    right: 267px;
+    top: 576px;
+    right: 354px;
   }
   .real-stuff__description_6 {
-    top: 468px;
-    left: 524px;
+    top: 379px;
+    left: 357px;
   }
 
 }
 @media (min-width: $desktop-wide) {
 
+  .real-stuff__products {
+    width: 1450px;
+  }
   .real-stuff__products-img {
     height: 1110px;
-    margin: 0 0 0 -426px;
   }
   .real-stuff__title {
     font-size: 260px;
@@ -418,28 +423,28 @@
 
   }
   .real-stuff__description_1 {
-    top: 308px;
-    left: 199px;
+    top: 352px;
+    left: 514px;
   }
   .real-stuff__description_2 {
-    top: 179px;
-    left: 646px;
+    top: 516px;
+    left: 746px;
   }
   .real-stuff__description_3 {
-    top: 404px;
-    left: 671px;
+    top: 888px;
+    left: 648px;
   }
   .real-stuff__description_4 {
-    top: 254px;
-    right: 180px;
+    top: 380px;
+    right: 316px;
   }
   .real-stuff__description_5 {
     top: 802px;
-    right: 206px;
+    right: 406px;
   }
   .real-stuff__description_6 {
-    top: 645px;
-    left: 457px;
+    top: 587px;
+    left: 399px;
   }
 
 }
