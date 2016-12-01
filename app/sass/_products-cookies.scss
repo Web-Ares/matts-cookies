@@ -67,8 +67,12 @@
     margin: 0;
   }
   .btn {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1px 10px 0;
+    width: 106px;
   }
 
 }
@@ -81,8 +85,11 @@
   padding: 26px 0 45px;
 }
 .products-cookies__item {
+  position: relative;
   display: inline-block;
   vertical-align: top;
+  padding-bottom: 30px;
+  width: 100%;
 
   &:hover {
 
@@ -231,9 +238,15 @@
 
     }
 
+    .btn {
+      padding: 1px 10px 0;
+      width: 190px;
+    }
+
   }
   .products-cookies__item {
     padding-top: 212px;
+    padding-bottom: 52px;
   }
   .products-cookies__pic {
     width: 224px;
