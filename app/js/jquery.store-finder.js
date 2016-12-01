@@ -18,6 +18,7 @@
             _obj = obj,
             _input = _obj.find('input'),
             _select = _obj.find('select'),
+            _flag = false,
             _btnSearch = _obj.find('.store-finders__search');
 
         //private methods
@@ -62,16 +63,32 @@
 
                         $('#wpsl-search-input').val( _input.val() );
 
-                        //if( $('#wpsl-search-input').val() ==  _input.val() ) {
-
-                            setTimeout( function() {
-                                $('#wpsl-search-btn').trigger('click');
-                            }, 10 );
-
-                        //}
 
 
+                        while ( true ) {
 
+                            if( !( $('#wpsl-search-input').val() == _input.val() ) ) {
+
+                                setTimeout( function() {
+
+                                    _flag = false;
+
+                                }, 10 );
+
+                            } else {
+
+                                _flag = true;
+
+                                if(_flag) {
+
+                                    $('#wpsl-search-btn').trigger('click');
+                                    break;
+
+                                }
+
+                            }
+
+                        }
 
                     }
                 } );
