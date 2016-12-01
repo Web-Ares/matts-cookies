@@ -57,6 +57,13 @@
 
                         $('#wpsl-search-btn').trigger('click');
 
+                        var selectedVal = _select.find('option:selected').val();
+
+                        $('#wpsl-radius-dropdown').find('option:selected').removeAttr('selected');
+                        $('#wpsl-radius-dropdown').find('option[value='+ selectedVal +']').attr('selected', 'selected');
+
+                        $('#wpsl-search-input').val( _input.val() );
+
                     }
                 } );
 
