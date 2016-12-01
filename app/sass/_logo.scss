@@ -7,8 +7,8 @@
   height: 99px;
   -webkit-transform: translateX(-50%) translateZ(0);
   transform: translateX(-50%) translateZ(0);
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 
@@ -28,7 +28,8 @@
 a.logo {
 
   &:hover {
-    opacity: 0.5;
+    -webkit-transform:  translateX(-50%) translateZ(0) scale(1.05);
+    transform: translateX(-50%) translateZ(0) scale(1.05);
   }
 
 }
