@@ -10,6 +10,8 @@
   margin: 0 auto;
 }
 .real-stuff__title {
+  position: relative;
+  z-index: 1;
   margin: 0 0 15px;
   text-align: center;
   color: #ed1b24;
@@ -129,6 +131,14 @@
 .real-stuff__description_6 {
   top: 196px;
   left: 124px;
+}
+.real-stuff__description_7 {
+  top: 68px;
+  left: 253px;
+}
+.real-stuff__description_8 {
+  top: 290px;
+  left: 146px;
 }
 .real-stuff__description-btn {
   position: relative;
@@ -285,17 +295,17 @@
     line-height: 25px;
   }
   .real-stuff__description-btn {
-    width: 73px;
-    height: 73px;
-    border-radius: 73px;
+    width: 52px;
+    height: 52px;
+    border-radius: 52px;
 
     &:before {
-      width: 55px;
-      height: 9px;
+      width: 40px;
+      height: 6px;
     }
     &:after {
-      width: 9px;
-      height: 55px;
+      width: 6px;
+      height: 40px;
     }
     &.opened {
       z-index: 3;
@@ -400,6 +410,14 @@
     top: 379px;
     left: 357px;
   }
+  .real-stuff__description_7 {
+    top: 171px;
+    left: 678px;
+  }
+  .real-stuff__description_8 {
+    top: 651px;
+    left: 433px;
+  }
 
 }
 @media (min-width: $desktop-wide) {
@@ -408,7 +426,9 @@
     width: 1450px;
   }
   .real-stuff__products-img {
-    height: 1110px;
+    //height: 1110px;
+    height: 1090px;
+    margin-top: -51px;
   }
   .real-stuff__title {
     font-size: 260px;
@@ -421,28 +441,36 @@
 
   }
   .real-stuff__description_1 {
-    top: 352px;
-    left: 514px;
+    top: 353px;
+    left: 523px;
   }
   .real-stuff__description_2 {
-    top: 516px;
-    left: 746px;
+    top: 529px;
+    left: 725px;
   }
   .real-stuff__description_3 {
-    top: 888px;
-    left: 648px;
+    top: 920px;
+    left: 666px;
   }
   .real-stuff__description_4 {
-    top: 380px;
-    right: 316px;
+    top: 400px;
+    right: 335px;
   }
   .real-stuff__description_5 {
-    top: 802px;
-    right: 406px;
+    top: 779px;
+    right: 359px;
   }
   .real-stuff__description_6 {
-    top: 587px;
-    left: 399px;
+    top: 568px;
+    left: 327px;
+  }
+  .real-stuff__description_7 {
+    top: 293px;
+    left: 782px;
+  }
+  .real-stuff__description_8 {
+    top: 886px;
+    left: 435px;
   }
 
 }
