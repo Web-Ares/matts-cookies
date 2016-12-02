@@ -11,7 +11,7 @@
 }
 .real-stuff__title {
   position: relative;
-  z-index: 1;
+  //z-index: 1;
   margin: 0 0 15px;
   text-align: center;
   color: #ed1b24;
@@ -428,7 +428,6 @@
   .real-stuff__products-img {
     //height: 1110px;
     height: 1090px;
-    margin-top: -51px;
   }
   .real-stuff__title {
     font-size: 260px;
