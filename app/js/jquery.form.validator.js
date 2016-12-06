@@ -161,6 +161,12 @@
                     _back.addClass('hidden');
                     _proceedPayment.addClass('visible');
 
+                } else {
+
+                    $('#payment').removeClass('visible');
+                    _back.removeClass('hidden');
+                    _proceedPayment.removeClass('visible');
+
                 }
 
             },
