@@ -300,12 +300,12 @@
   }
 
   .shop_table {
-    border: none;
-    margin: 0;
-    text-align: left;
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 0;
+    border: none  !important;
+    margin: 0  !important;
+    text-align: left  !important;
+    width: 100%  !important;
+    border-collapse: collapse  !important;
+    border-radius: 0  !important;
 
     thead {
       display: none;
@@ -315,6 +315,7 @@
 
       td,th {
         padding: 6px 0 5px;
+        border: none   !important;
 
         &:nth-child(1) {
           width: 80%;
@@ -391,11 +392,11 @@
     tbody th,
     tfoot td,
     tfoot th {
-      border: none;
+      border: none   !important;
     }
 
     .blockUI.blockOverlay {
-      opacity: 0.97;
+      opacity: 0.97 !important;
     }
 
     .blockUI.blockOverlay:before,
