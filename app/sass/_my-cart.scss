@@ -417,6 +417,30 @@
     }
 
   }
+  #payment {
+
+    .blockUI.blockOverlay {
+      opacity: 0.97 !important;
+    }
+
+    .blockUI.blockOverlay:before,
+    .loader:before {
+      background: transparent;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid #7a222e;
+      border-left: 5px solid #7a222e;
+      border-right: 5px solid transparent;
+      border-top: 5px solid #7a222e;
+      border-bottom: 5px solid #7a222e;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-radius: 100%;
+      -webkit-animation: spin 1s linear infinite;
+      -moz-animation: spin 1s linear infinite;
+      animation: spin 1s linear infinite;
+    }
+
+  }
 
 }
 .my-cart__items {
@@ -645,6 +669,7 @@
     transition: visibility 0.5s ease, opacity 0.5s ease;
   }
 }
+
 
 @-webkit-keyframes cwSpin {
   0%{
