@@ -127,7 +127,8 @@
                         $('.checkout__form').removeClass('hidden');
                         $('.my-cart__review').removeClass('visible');
 
-                        cancelAnimationFrame( requestAnimationFrame( _checkBlock ) );
+                        //cancelRequestAnimFrame(  );
+
 
                         return false;
 
@@ -153,8 +154,6 @@
 
             },
             _loop = function() {
-
-                //console.log(3);
 
                 if( _obj.find('.shipping_method-success').length != 0 ) {
 

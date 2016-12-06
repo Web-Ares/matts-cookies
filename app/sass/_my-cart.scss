@@ -300,6 +300,12 @@
   }
 
   .shop_table {
+    border: none;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 0;
 
     thead {
       display: none;
@@ -380,6 +386,12 @@
 
       }
 
+    }
+
+    tbody th,
+    tfoot td,
+    tfoot th {
+      border: none;
     }
 
   }
