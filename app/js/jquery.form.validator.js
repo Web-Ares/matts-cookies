@@ -149,26 +149,25 @@
             },
             _checkBlock = function () {
 
-                //requestAnimationFrame( _checkBlock );
-                //_loop();
+                requestAnimationFrame( _checkBlock );
+                _loop();
 
             },
             _loop = function() {
 
-                //if( _obj.find('.shipping_method-success').length != 0 ) {
-                //
-                //    $('#payment').addClass('visible');
-                //    _back.addClass('hidden');
-                //    _proceedPayment.addClass('visible');
-                //
-                //}
-                //else {
-                //
-                //    $('#payment').removeClass('visible');
-                //    _back.removeClass('hidden');
-                //    _proceedPayment.removeClass('visible');
-                //
-                //}
+                if( _obj.find('.shipping_method-success').length ) {
+
+                    $('#payment').addClass('visible');
+                    _back.addClass('hidden');
+                    _proceedPayment.addClass('visible');
+
+                } else {
+
+                    $('#payment').removeClass('visible');
+                    _back.removeClass('hidden');
+                    _proceedPayment.removeClass('visible');
+
+                }
 
             },
             _validateField = function ( field ) {
