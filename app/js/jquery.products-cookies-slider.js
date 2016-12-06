@@ -101,6 +101,15 @@
         var _addEvents = function () {
 
                 _window.on( {
+                    load: function() {
+
+                        if( _window.width() >= 768 ) {
+
+                            _setHeight();
+
+                        }
+
+                    },
                     resize: function() {
 
                         if( _window.width() >= 768 ) {
@@ -190,12 +199,6 @@
             _init = function() {
                 _obj[0].obj = _self;
                 _addEvents();
-
-                if( _window.width() >= 768 ) {
-
-                    _setHeight();
-
-                }
 
             };
 

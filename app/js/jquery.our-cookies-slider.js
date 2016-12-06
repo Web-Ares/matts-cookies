@@ -27,7 +27,7 @@
                 _obj.find('.slick-container').slick( {
                     dots: true,
                     autoplay: true,
-                    autoplaySpeed: 5000
+                    autoplaySpeed: 10000
                 } );
 
             };

@@ -127,12 +127,6 @@
 
 @media (min-width: $desktop) {
 
-  .popup__close {
-    top: -33px;
-    width: 34px;
-    height: 34px;
-    right: -27px;
-  }
   .nutrition-facts{
     .site__title_3 {
       text-align: left;
@@ -189,6 +183,14 @@
     line-height: 21px;
   }
 
+}
+@media (min-width: $desktop-wide) {
+  .popup__close {
+    top: -33px;
+    width: 34px;
+    height: 34px;
+    right: -27px;
+  }
 }
 
 
