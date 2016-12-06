@@ -24,6 +24,7 @@
         var _self = this,
             _obj = obj,
             _fields = _obj.find( '[data-required]' ),
+            _window = $(window),
             _back = _obj.find( '.checkout__back' ),
             _proceedPayment = _obj.find( '.checkout__proceed-payment' ),
             _btn = _obj.find( '.checkout__proceed .btn' );
@@ -32,7 +33,6 @@
         var _constructor = function () {
                 _onEvents();
                 _obj[0].obj = _self;
-
             },
             _addNotTouchedClass = function () {
 
@@ -71,6 +71,13 @@
 
             },
             _onEvents = function () {
+                _window.on( {
+                    load: function() {
+
+                        $( 'body' ).trigger( 'update_checkout' );
+
+                    }
+                } );
                 _fields.on( {
                     focus: function() {
 
