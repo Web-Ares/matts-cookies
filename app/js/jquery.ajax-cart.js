@@ -359,14 +359,14 @@
             },
             _setHeight = function() {
 
-                _obj.each( function() {
+                //_obj.each( function() {
 
-                    var curItem = $(this),
+                    var curItem = _obj,
                         children = curItem.find('>div');
 
                     curItem.height( children.outerHeight(true) );
 
-                } )
+                //} )
 
             },
             _writeInCart =  function() {

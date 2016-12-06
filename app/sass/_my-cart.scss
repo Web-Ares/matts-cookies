@@ -153,19 +153,19 @@
     position: absolute;
     top: 50%;
     left: 0;
-    margin: -16px 0 0 -1px;
-    width: 36px;
-    height: 36px;
+    margin: -9px 0 0 -3px;
+    width: 24px;
+    height: 24px;
     border-radius: 80px;
     background: transparent;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid #7a222e;
-    border-left: 5px solid #7a222e;
-    border-right: 5px solid transparent;
-    border-top: 5px solid #7a222e;
-    border-bottom: 5px solid #7a222e;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid #7a222e;
+    border-left: 2px solid #7a222e;
+    border-right: 2px solid transparent;
+    border-top: 2px solid #7a222e;
+    border-bottom: 2px solid #7a222e;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
     -webkit-animation: cwSpin 1s linear .2s infinite;
     animation: cwSpin .666s linear .2s infinite;
 
@@ -392,6 +392,27 @@
     tfoot td,
     tfoot th {
       border: none;
+    }
+
+    .blockUI.blockOverlay {
+      opacity: 0.97;
+    }
+
+    .blockUI.blockOverlay:before,
+    .loader:before {
+      background: transparent;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid #7a222e;
+      border-left: 5px solid #7a222e;
+      border-right: 5px solid transparent;
+      border-top: 5px solid #7a222e;
+      border-bottom: 5px solid #7a222e;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-radius: 100%;
+      -webkit-animation: spin 1s linear infinite;
+      -moz-animation: spin 1s linear infinite;
+      animation: spin 1s linear infinite;
     }
 
   }
@@ -739,6 +760,23 @@
     height: 30px;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+
+    > span {
+      margin: -16px 0 0 -1px;
+      width: 36px;
+      height: 36px;
+      border-radius: 80px;
+      background: transparent;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid #7a222e;
+      border-left: 5px solid #7a222e;
+      border-right: 5px solid transparent;
+      border-top: 5px solid #7a222e;
+      border-bottom: 5px solid #7a222e;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+    }
+
   }
   .my-cart__head {
     position: relative;
