@@ -147,8 +147,10 @@
                 return re.test(email);
             },
             _checkBlock = function () {
+
                 requestAnimationFrame( _checkBlock );
                 _loop();
+
             },
             _loop = function() {
 
