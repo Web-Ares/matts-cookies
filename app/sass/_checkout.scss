@@ -116,6 +116,28 @@
   }
 
 }
+.checkout__proceed-payment {
+  display: none;
+
+  &.visible {
+    @include inline-flex();
+  }
+
+}
+.checkout__back {
+
+  &.hidden {
+    display: none;
+  }
+
+}
+#payment {
+  display: none;
+
+  &.visible {
+    display: block;
+  }
+}
 
 @media (min-width: $desktop) {
 

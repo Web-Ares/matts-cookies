@@ -251,7 +251,7 @@
                     <form action="#">
 
                         <!-- checkout__form -->
-                        <div class="checkout__form hidden">
+                        <div class="checkout__form">
 
                             <h2 class="checkout__title">your SHIPING info</h2>
 
@@ -446,7 +446,7 @@
                         <!-- /checkout__form -->
 
                         <!-- my-cart__review -->
-                        <div class="my-cart__review visible">
+                        <div class="my-cart__review">
                             <h2 class="site__title site__title_4">Please review YOUR order</h2>
 
                             <!--&lt;!&ndash; my-cart__items &ndash;&gt;-->
@@ -554,8 +554,8 @@
                                 <tr class="shipping">
                                     <!--<th>Shipping</th>-->
                                     <td colspan="2" data-title="Shipping">
-                                        <p>Shipping</p>
-                                        <p>There are no shipping methods available. Please double check your address, or contact us if you need any help.</p>
+                                        <p class="shipping__title">Shipping</p>
+                                        <p class="shipping_method-success">There are no shipping methods available. Please double check your address, or contact us if you need any help.</p>
 
 
                                     </td>
@@ -579,7 +579,8 @@
                                 </tfoot>
                             </table>
 
-                            <a href="#" class="btn btn_5"><span>PROCEED TO Payment</span></a>
+                            <a href="#" class="btn btn_5 checkout__back"><span>back</span></a>
+                            <a href="#" class="btn btn_5 checkout__proceed-payment"><span>PROCEED TO Payment</span></a>
 
                         </div>
                         <!-- /my-cart__review -->

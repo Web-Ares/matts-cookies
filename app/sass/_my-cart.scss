@@ -304,7 +304,6 @@
     thead {
       display: none;
     }
-
     tr {
       border-bottom: 1px dashed #7a222e;
 
@@ -339,7 +338,6 @@
       }
 
     }
-
     tfoot {
 
       tr {
@@ -351,6 +349,37 @@
 
         }
       }
+    }
+    .shipping {
+
+      td {
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        .shipping__title {
+          width: 40%;
+          float: left;
+        }
+
+        p {
+          width: 60%;
+          display: inline-block;
+          float: right;
+        }
+        .shipping_method-success {
+          width: 60%;
+          display: inline-block;
+          float: right;
+          text-align: right;
+
+          #shipping_method {
+            text-align: left;
+          }
+
+        }
+
+      }
+
     }
 
   }
@@ -934,6 +963,16 @@
 
           }
         }
+      }
+      .shipping {
+
+        td {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 19px;
+          padding-right: 19px;
+        }
+
       }
 
     }

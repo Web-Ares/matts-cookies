@@ -1,6 +1,13 @@
 "use strict";
 ( function(){
 
+    window.requestAnimFrame = (function(){
+        return  window.requestAnimationFrame       ||
+            function(/* function */ callback, /* DOMElement */ element){
+                window.setTimeout(callback, 1000 / 60);
+            };
+    })();
+
     $( function () {
 
         $.each( $( '.checkout' ), function() {
@@ -17,11 +24,12 @@
         var _self = this,
             _obj = obj,
             _fields = _obj.find( '[data-required]' ),
+            _back = _obj.find( '.checkout__back' ),
+            _proceedPayment = _obj.find( '.checkout__proceed-payment' ),
             _btn = _obj.find( '.checkout__proceed .btn' );
 
         //private methods
         var _constructor = function () {
-
                 _onEvents();
                 _obj[0].obj = _self;
 
@@ -89,7 +97,6 @@
 
                     }
                 } );
-
                 _btn.on( {
                     click: function() {
 
@@ -104,6 +111,9 @@
 
                             $('.checkout__form').addClass('hidden');
                             $('.my-cart__review').addClass('visible');
+                            $( 'body' ).trigger( 'update_checkout' );
+
+                            _checkBlock();
 
                         }
 
@@ -111,7 +121,18 @@
 
                     }
                 } );
+                _back.on( {
+                    click: function() {
 
+                        $('.checkout__form').removeClass('hidden');
+                        $('.my-cart__review').removeClass('visible');
+
+                        cancelAnimationFrame( requestAnimationFrame( _checkBlock ) );
+
+                        return false;
+
+                    }
+                } );
             },
             _makeNotValid = function ( field ) {
                 field.addClass( 'not-valid' );
@@ -124,6 +145,23 @@
             _validateEmail = function ( email ) {
                 var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                 return re.test(email);
+            },
+            _checkBlock = function () {
+                requestAnimationFrame( _checkBlock );
+                _loop();
+            },
+            _loop = function() {
+
+                //console.log(3);
+
+                if( _obj.find('.shipping_method-success').length != 0 ) {
+
+                    $('#payment').addClass('visible');
+                    _back.addClass('hidden');
+                    _proceedPayment.addClass('visible');
+
+                }
+
             },
             _validateField = function ( field ) {
                 var type = field.attr( 'type' );

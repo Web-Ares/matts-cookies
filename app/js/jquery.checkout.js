@@ -1,6 +1,8 @@
 "use strict";
 ( function(){
 
+
+
     var globalScrollFlag = true;
 
     $( function () {
@@ -31,6 +33,8 @@
 
                         if( _showCheckbox.prop('checked') == false ) {
 
+                            $('#ship-to-different-address-checkbox').prop('checked', true);
+
                             _billingInfo.height( _billingInfo.find('>.checkout__info').outerHeight(true) );
                             _billingInfo.addClass('visible');
                             _dom.stop( true, false );
@@ -58,6 +62,8 @@
 
 
                         } else {
+
+                            $('#ship-to-different-address-checkbox').prop('checked', false);
 
                             _billingInfo.height( 0 );
                             _billingInfo.removeClass('visible');
@@ -95,7 +101,7 @@
 
                         }
 
-                        $('#ship-to-different-address-checkbox').trigger('click');
+                        //$('#ship-to-different-address-checkbox').trigger('click');
 
                     }
                 } );
