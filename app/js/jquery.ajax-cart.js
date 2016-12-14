@@ -484,6 +484,8 @@
             },
             _animatedAdding = function( event ) {
 
+                $('.site__header').removeClass('site__header_hidden');
+
                 var pic = $('.gallery__top .slick-current').data('image'),
 
                 e = event || window.event;
@@ -507,7 +509,7 @@
                         left: _cart.offset().left + _cart.innerWidth()/2 - $('.site__product').width()/2
                     } );
 
-                }, 100 );
+                }, 400 );
 
                 setTimeout( function() {
 
@@ -517,13 +519,13 @@
                         'transform': 'scale(0.3)'
                     } );
 
-                }, 500 );
+                }, 800 );
 
                 setTimeout( function() {
 
                     $('.site__product').remove();
 
-                }, 700 );
+                }, 1100 );
 
 
                 _writeInCart();
@@ -554,7 +556,7 @@
 
                             }
 
-                        }, 100 );
+                        }, 400 );
 
                     }, 600 );
 
@@ -567,7 +569,7 @@
 
                         _cart.find('div').html( newCount + ' items');
 
-                    }, 700 );
+                    }, 1100 );
 
                 }
 

@@ -133,6 +133,10 @@ html {
         background-image: url('../img/cart-fill.png');
       }
 
+      &:hover {
+        background-color: #7a222e;
+      }
+
     }
 
   }
@@ -540,12 +544,12 @@ input[type="number"].site__input {
         right: 10px;
 
         div {
-          display: none;
+          //display: none;
         }
 
       }
       .cart_fill {
-        padding: 0;
+        //padding: 0;
       }
       .logo {
         opacity: 1;
@@ -555,12 +559,37 @@ input[type="number"].site__input {
         height: 84px;
         @include transform-translate( -50%,  0 );
       }
+
+      &.site__header_fill-cart {
+
+        .cart {
+          font-size: 20px;
+          line-height: 28px;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+        }
+        .site__menu-link {
+          font-size: 18px;
+          line-height: 30px;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+        }
+        .site__menu-nav {
+          padding-left: 115px;
+          padding-right: 115px;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+        }
+
+      }
+
     }
     &.site__header_fill-cart {
 
       .social-networks {
         right: 120px;
       }
+
 
     }
 
@@ -879,6 +908,29 @@ input[type="number"].site__input {
 
     .social-networks {
       right: -23px;
+    }
+
+    &.site__header_fixed {
+      position: fixed;
+      height: 91px;
+
+      &.site__header_fill-cart {
+
+        .cart {
+          font-size: 20px;
+          line-height: 28px;
+        }
+        .site__menu-link {
+          font-size: 22px;
+          line-height: 30px;
+        }
+        .site__menu-nav {
+          padding-left: 115px;
+          padding-right: 115px;
+        }
+
+      }
+
     }
 
   }

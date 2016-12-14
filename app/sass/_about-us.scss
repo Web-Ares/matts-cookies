@@ -106,16 +106,14 @@
         -webkit-transition: opacity 0.7s ease,  -webkit-transform 0.7s ease;
         transition: opacity 0.7s ease, transform 0.7s ease;
       }
-      .about-us__cookies_1,
-      .about-us__cookies_2 {
+      .about-us__cookies_1 {
         opacity: 0;
         -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
         -webkit-transition: opacity 0.5s ease 0.2s,  -webkit-transform 0.5s ease 0.2s;
         transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
       }
-      .about-us__cookies_3,
-      .about-us__cookies_4 {
+      .about-us__cookies_2 {
         opacity: 0;
         -webkit-transform: translateX(100%);
         transform: translateX(100%);
@@ -138,9 +136,7 @@
         transform: translateY(0);
       }
       .about-us__cookies_1,
-      .about-us__cookies_2,
-      .about-us__cookies_3,
-      .about-us__cookies_4 {
+      .about-us__cookies_2 {
         opacity: 1;
         -webkit-transform: translateX(0);
         transform: translateX(0);
