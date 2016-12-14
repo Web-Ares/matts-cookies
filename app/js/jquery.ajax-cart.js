@@ -447,6 +447,7 @@
             _input = _obj.find('.count-product__input'),
             _price = _obj.find('.product-single__price'),
             _addToCartBtn = _obj.find('.product-single__add'),
+            _header = $('.site__header'),
             _request = new XMLHttpRequest(),
             _cart = $('.cart'),
             oldCount = 0,
@@ -484,7 +485,9 @@
             },
             _animatedAdding = function( event ) {
 
-                $('.site__header').removeClass('site__header_hidden');
+                _header.removeClass('site__header_hidden');
+                _header.removeClass('site__header_hide');
+                _header.addClass('site__header_fixed');
 
                 var pic = $('.gallery__top .slick-current').data('image'),
 
