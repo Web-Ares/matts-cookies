@@ -52,7 +52,7 @@
 
                         _dom.stop( true, false );
                         _dom.animate( {
-                            scrollTop: $('.our-cookies').offset().top
+                            scrollTop: $('.our-cookies').offset().top - _header.innerHeight()
 
                         }, {
                             duration: 500,

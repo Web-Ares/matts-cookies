@@ -260,7 +260,9 @@
                             _img4 = slide.find('.real-stuff__description_3:not(.opened)'),
                             _img5 = slide.find('.real-stuff__description_4:not(.opened)'),
                             _img6 = slide.find('.real-stuff__description_5:not(.opened)'),
-                            _img7 = slide.find('.real-stuff__description_6:not(.opened)');
+                            _img7 = slide.find('.real-stuff__description_6:not(.opened)'),
+                            _img8 = slide.find('.real-stuff__description_7:not(.opened)'),
+                            _img9 = slide.find('.real-stuff__description_8:not(.opened)');
 
                         if ( _window.width() > 1024 && !( _header.hasClass('opened') ) ) {
 
@@ -280,6 +282,8 @@
                                 _moveBottom(percentFromCenterX, percentFromCenterY, _step3, _img5);
                                 _moveBottom(percentFromCenterX, percentFromCenterY, _step1, _img6);
                                 _moveBottom(percentFromCenterX, percentFromCenterY, _step5, _img7);
+                                _moveTop(percentFromCenterX, percentFromCenterY, _step1, _img8);
+                                _moveBottom(percentFromCenterX, percentFromCenterY, _step3, _img9);
 
                             }
 

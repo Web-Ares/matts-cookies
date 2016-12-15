@@ -374,19 +374,21 @@
                             newClass = curItem.attr('data-href'),
                             nextItemTop = $( '.' + newClass  ).offset().top;
 
+                        var heightHeader = _header.innerHeight();
 
                         $('.site__menu-nav_anchors a').removeClass('active');
                         curItem.addClass('active');
 
                         _dom.stop( true, false );
                         _dom.animate( {
-                            scrollTop: nextItemTop
+                            scrollTop: nextItemTop - heightHeader
 
                         }, {
                             duration: 500,
                             progress: function () {
                                 globalScrollFlag = false;
                                 _header.addClass( 'site__header_hidden' );
+                                heightHeader = _header.innerHeight();
                             },
                             complete: function () {
 
@@ -426,7 +428,7 @@
                         itemCur = $(item[i]).offset().top - _header.outerHeight(true),
                         itemHeight = $(item[i]).outerHeight(true);
 
-                    if( scrollTop > itemCur ) {
+                    if( scrollTop > itemCur - 20 ) {
 
                         var curClass = cur.attr('class').split(' '),
                             curLink = _links.filter("[data-href="+curClass[0]+"]");

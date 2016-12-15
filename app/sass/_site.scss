@@ -141,8 +141,8 @@ html {
 
   }
   &.site__header_hidden {
-    -webkit-transform: translateY(-130%);
-    transform: translateY(-130%);
+    //-webkit-transform: translateY(-130%);
+    //transform: translateY(-130%);
   }
   &.opened-menu {
 
@@ -466,8 +466,8 @@ input[type="number"].site__input {
   }
 
 }
-@media all and (-ms-high-contrast:none)
-{
+
+@media all and (-ms-high-contrast:none) {
   .site__main-title {
     background-size: 161px 161px;
   }
@@ -475,7 +475,6 @@ input[type="number"].site__input {
      background-size: 161px 161px;
    }
 }
-
 @media (min-width: $desktop) {
 
   .site {
@@ -768,6 +767,7 @@ input[type="number"].site__input {
     font-size: 13px;
     line-height: 18px;
     color: #fff;
+    @include main-font4();
   }
   .site__footer-layout {
     position: relative;

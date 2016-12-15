@@ -36,7 +36,7 @@
                             _billingInfo.addClass('visible');
                             _dom.stop( true, false );
                             _dom.animate( {
-                                scrollTop: _billingInfo.offset().top - $('.checkout__title').outerHeight(true)
+                                scrollTop: _billingInfo.offset().top - $('.checkout__title').outerHeight(true) - _header.innerHeight()
 
                             }, {
                                 duration: 500,
@@ -65,7 +65,7 @@
                             _billingInfo.removeClass('visible');
                             _dom.stop( true, false );
                             _dom.animate( {
-                                scrollTop: _obj.offset().top - $('.checkout__title').outerHeight(true)
+                                scrollTop: _obj.offset().top - $('.checkout__title').outerHeight(true) - _header.innerHeight()
 
                             }, {
                                 duration: 500,
